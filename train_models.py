@@ -32,3 +32,4 @@ y_emotion_enc = le_emotion.fit_transform(y_emotion)
 emotion_model = RandomForestClassifier(n_estimators=50, random_state=42)
 emotion_model.fit(X_emotion, y_emotion_enc)
 joblib.dump((emotion_model, le_emotion), "models/emotion_model.pkl")
+
